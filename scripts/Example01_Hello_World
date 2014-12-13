@@ -1,0 +1,4 @@
+echo "curl http://localhost:4567/hello"
+OUT=$(curl -s http://localhost:4567/hello)
+echo "    $OUT"
+

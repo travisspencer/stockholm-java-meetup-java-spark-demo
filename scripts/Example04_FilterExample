@@ -1,0 +1,9 @@
+CMD='curl -si http://localhost:4567/hello?some=foo&password=guy'
+echo $CMD
+OUT=$($CMD | sed -e 's/^/    /g')
+echo "$OUT"
+
+CMD='curl -si http://localhost:4567/hello?user=admin&password=admin'
+echo $CMD
+OUT=$($CMD | sed -e 's/^/    /g')
+echo "$OUT"

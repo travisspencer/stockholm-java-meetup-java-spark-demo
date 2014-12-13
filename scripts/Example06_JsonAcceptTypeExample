@@ -1,0 +1,9 @@
+CMD='curl -is -H "Accept: application/json" http://localhost:4567/hello'
+echo $CMD
+OUT=$(curl -is -H "Accept: application/json" http://localhost:4567/hello)
+echo "$OUT"
+
+CMD='curl -i -s -H "Accept: text/html" http://localhost:4567/hello'
+echo $CMD
+OUT=$(curl -i -s -H "Accept: text/html" http://localhost:4567/hello)
+echo "$OUT"

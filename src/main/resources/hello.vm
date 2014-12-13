@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>$title</title>
+</head>
+<body>
+<hgroup>
+    <h1>Example 07</h1>
+    <h2>Velocity Example</h2>
+</hgroup>
+
+<p>Variables given from controller in the model:</p>
+
+<dl>
+    #foreach ($e in $data.entrySet())
+        <dt>$e.key</dt>
+        <dd>$e.value</dd>
+    #end
+</dl>
+</body>
+</html>

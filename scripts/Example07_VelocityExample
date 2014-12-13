@@ -1,0 +1,4 @@
+CMD='curl -s http://localhost:4567/hello'
+echo $CMD
+OUT=$($CMD)
+echo "$OUT"

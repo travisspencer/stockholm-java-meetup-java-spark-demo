@@ -1,0 +1,29 @@
+CMD='curl -d "Hello Java Meetup Stockholm!" http://localhost:4567/hello'
+echo $CMD
+OUT=$(curl -sd "Hello Java Meetup Stockholm!" http://localhost:4567/hello)
+echo "    $OUT"
+
+CMD='curl -si http://localhost:4567/private'
+echo $CMD
+OUT=$($CMD | sed -e 's/^/    /g')
+echo "$OUT"
+
+CMD='curl -s http://localhost:4567/users/travis'
+echo $CMD
+OUT=$($CMD)
+echo "    $OUT"
+
+CMD='curl -si http://localhost:4567/news/sports'
+echo $CMD
+OUT=$($CMD | sed -e 's/^/    /g')
+echo "$OUT"
+
+CMD='curl -si http://localhost:4567/redirect'
+echo $CMD
+OUT=$($CMD | sed -e 's/^/    /g')
+echo "$OUT"
+
+CMD='curl -s http://localhost:4567/'
+echo $CMD
+OUT=$($CMD)
+echo "    $OUT"

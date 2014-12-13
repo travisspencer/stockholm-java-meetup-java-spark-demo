@@ -1,0 +1,24 @@
+CMD='curl -i -d "author=travis" -d "title=War and Peace" http://localhost:4567/books'
+echo $CMD
+OUT=$(curl -is -d "author=travis" -d "title=War and Peace" http://localhost:4567/books | sed -e 's/^/    /g')
+echo "$OUT"
+
+CMD='curl -si http://localhost:4567/books/1'
+echo $CMD
+OUT=$($CMD | sed -e 's/^/    /g')
+echo "$OUT"
+
+CMD='curl -X PUT -i -d "author=Leo Tolstoy" http://localhost:4567/books/1'
+echo $CMD
+OUT=$(curl -X PUT -is -d "author=Leo Tolstoy" http://localhost:4567/books/1 | sed -e 's/^/    /g')
+echo "$OUT"
+
+CMD='curl -si http://localhost:4567/books/1'
+echo $CMD
+OUT=$($CMD | sed -e 's/^/    /g')
+echo "$OUT"
+
+CMD='curl -si -X DELETE http://localhost:4567/books/1'
+echo $CMD
+OUT=$($CMD | sed -e 's/^/    /g')
+echo "$OUT"
