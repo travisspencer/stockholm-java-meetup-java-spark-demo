@@ -51,7 +51,7 @@ The net effect is that message handling for an endpoint is packaged up in a Cont
 
 ### Application Example
 
-```
+```java
 public class Application implements SparkApplication
 {
     private final DefaultPicoContainer appContainer;
@@ -75,7 +75,7 @@ public class Application implements SparkApplication
 
 ### Controller Example
 
-```
+```java
 public class FooController implements Controllable
 {
     @Override
